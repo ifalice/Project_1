@@ -7,6 +7,10 @@ class Person:
     def call(self):
         return self.__name
 
+    @call.setter
+    def call(self, new_name):
+        self.name = new_name
+
 a = Person("Yura")
 print(a.call)
 
