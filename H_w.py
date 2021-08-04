@@ -11,6 +11,10 @@ class Person:
     def call(self, new_name):
         self.name = new_name
 
+    @call.deleter
+    def call(self):
+        del self.name
+
 a = Person("Yura")
 print(a.call)
 
