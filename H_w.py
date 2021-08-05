@@ -17,6 +17,6 @@ class Person:
 
 a = Person("Yura")
 print(a.call)
-
+b = Person("Misha")
 
         
