@@ -21,8 +21,8 @@ class News(models.Model):
         return "Hello from model"
 
     class Meta:
-        verbose_name = 'New'
-        verbose_name_plural = "News"
+        verbose_name = 'Новость'
+        verbose_name_plural = "Список новостей"
         ordering = ['-created_at']
 
 
