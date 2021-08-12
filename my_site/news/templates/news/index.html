@@ -4,19 +4,12 @@
 {% block title %}
     {{ title }} :: {{ block.super}}
 {% endblock %}
-{% block sidebar %}
-<div class="col-md-4">
-    <div class="list-group">
-        {% for item in categories %}
-        <a href="{% url 'category' item.pk %}" class="list-group-item list-group-item-action">{{ item.title }}</a>
-        {% endfor %}
-    </div>
-</div>
 
+{% block sidebar %}
+    {% include 'inc/_sidebar.html'%}   
 {% endblock %}
 
 {% block content %}
-<div class="col-md-8">
     {% for item in news %}
     <div class="card mb-3">
         <div class="card-header">
@@ -34,7 +27,6 @@
                     <a href="#" class="btn btn-primary">Read more...</a>
                 </div>
             </div>
-
         </div>
         <div class="card-footer text-muted">
             {{ item.created_at|date:"Y-m-d H-i-s"}}
